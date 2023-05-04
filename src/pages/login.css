@@ -1,0 +1,36 @@
+body{
+    background: #e5f6f8;
+}
+.login-fram-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border: solid 2px #FFF;
+   
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+label{
+    margin: 1rem 0;
+    font-size: 20px;
+}
+input{
+    width: 200px;
+    font-size: 20px;
+}
+
+button{
+    width: 140px;
+    height: 30px;
+    padding: auto;
+    background: #35acdb;
+    border-radius: 12px;
+    font-size: 20px;
+    margin-top: 1rem;
+}
