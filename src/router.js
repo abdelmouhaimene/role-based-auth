@@ -21,17 +21,16 @@ const Router = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/notAuth' element={<NotAuth/>}/>
         <Route path='/' element={<Home/>}/>
-        
-
-        {/* protected routes  */}
         <Route path='/user' element= { 
           <Layout>  <User/> </Layout>
         }/>
         
-        
+
+        {/* protected routes  */}
         <Route path='/admin' element={
           <Layout> {role === "admin" ? <Admin/> : <NotAuth />}</Layout>
         }/>
+
 
         {/* route not found */}
         <Route path='/*' element={<Missing/>}/>
