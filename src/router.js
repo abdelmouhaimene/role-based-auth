@@ -12,7 +12,8 @@ import { UserContext } from './App';
 
 const Router = () => {
 
-
+  const {user} = useContext(UserContext)
+  const role = user ? user.role : null ;
 
   return (
     <Routes>
@@ -24,12 +25,12 @@ const Router = () => {
 
         {/* protected routes  */}
         <Route path='/user' element= { 
-          <Layout> <User/> </Layout>
+          <Layout>  <User/> </Layout>
         }/>
         
         
         <Route path='/admin' element={
-          <Layout><Admin/></Layout>
+          <Layout> {role === "admin" ? <Admin/> : <NotAuth />}</Layout>
         }/>
 
         {/* route not found */}
